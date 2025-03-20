@@ -3,19 +3,11 @@
 # task 02 == Знайдіть та відобразіть всі символи одинарної лапки (') у тексті
 # task 03 == Виведіть змінну alice_in_wonderland на друк
 
-alice_in_wonderland = "Would you tell me, please, which way I ought to go from here?"
-"That depends a good deal on where you want to get to," said the Cat.
-"I don't much care where ——" said Alice.
-"Then it doesn't matter which way you go," said the Cat.
-"—— so long as I get somewhere," Alice added as an explanation.
-"Oh, you're sure to do that," said the Cat, "if you only walk long enough."
-
-for char in alice_in_wonderland:
-    if char == "'":
-        print(char)
+alice_in_wonderland = '"Would you tell me, please, which way I ought to go from here?"\n"That depends a good deal on where you want to get to," said the Cat.\n\
+"I don\'t much care where ——" said Alice.\n"Then it doesn\'t matter which way you go," said the Cat.\n"—— so long as I get somewhere," Alice added as an explanation.\n\
+"Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."'
 
 print(alice_in_wonderland)
-
 
 """
     # Задачі 04 -10:
@@ -31,7 +23,12 @@ print(alice_in_wonderland)
 """
 black_sea_area = 436402
 azov_sea_area = 37800
-print(black_sea_area + azov_sea_area , "км2")
+
+task_4_description = (f"Площа Чорного моря становить {black_sea_area} км2, а площа Азовського\n"
+f"моря становить {azov_sea_area} км2.Яку площу займають Чорне та Азов-\n"
+f"ське моря разом?")
+
+print(task_4_description)
 
 # task 05
 """
@@ -44,11 +41,12 @@ sklad_all = 375291
 sklad_1_2 = 250449
 sklad_2_3 = 222950
 
-sklad_1 = sklad_all - sklad_2_3
-sklad_2 = sklad_1_2 - sklad_1
-sklad_3 = sklad_all - sklad_2
+task_5_description = (f"Мережа супермаркетів має 3 склади, де всього розміщено \n"
+f"{sklad_all} товар. На першому та другому складах перебуває \n"
+f"{sklad_1_2} товарів. На другому та третьому – {sklad_2_3} товарів.\n"
+f"Знайдіть кількість товарів, що розміщені на кожному складі.")
 
-print(sklad_1,sklad_2,sklad_3 )
+print(task_5_description)
 
 # task 06
 """
@@ -57,10 +55,12 @@ print(sklad_1,sklad_2,sklad_3 )
 вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть
 вартість комп’ютера.
 """
-monthly_pay = 1179
-number_month = 1.5 * 12
-total_price = monthly_pay * number_month
-print(total_price)
+task_6_description = 'Михайло разом з батьками вирішили купити комп\'ютер, ско-\n'\
+'риставшись послугою "Оплата частинами". Відомо, що сплачу-\n'\
+'вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть\n'\
+'вартість комп\'ютера.'
+
+print(task_6_description)
 
 # task 07
 """
@@ -69,7 +69,12 @@ a) 8019 : 8     d) 7248 : 6
 b) 9907 : 9     e) 7128 : 5
 c) 2789 : 5     f) 19224 : 9
 """
-print(8019%8, 9907%9, 2789%5, 7248%6, 7128%5, 19224%9)
+task_7_description = "Знайди остачу від діленя чисел:\n"\
+"a) 8019 : 8    d) 7248 : 6\n"\
+"b) 9907 : 9    e) 7128 : 5\n"\
+"c) 2789 : 5    f) 19224 : 9\n"\
+
+print(task_7_description)
 
 # task 08
 """
@@ -83,11 +88,17 @@ print(8019%8, 9907%9, 2789%5, 7248%6, 7128%5, 19224%9)
 Торт            1           350 грн
 Вода            3           21 грн
 """
-product = ("pizza_big", "pizza_medium", "juice", "cake", "water")
-price = (274, 218, 35, 350,21)
-quantity = (4, 2, 4, 1, 3)
-total_sum = ( price[0] * quantity[0] + price[1] * quantity[1] + price[2] * quantity[2] + price[3] * quantity[3] + price[4] * quantity[4])
-print(total_sum)
+task_8_description = "Іринка, готуючись до свого дня народження, склала список того,\n"\
+"що їй потрібно замовити. Обчисліть, скільки грошей знадобиться\n"\
+"для даного її замовлення.\n"\
+"Назва товару    Кількість   Ціна\n"\
+"Піца велика     4           274 грн\n"\
+"Піца середня    2           218 грн\n"\
+"Сік             4           35 грн\n"\
+"Торт            1           350 грн\n"\
+"Вода            3           21 грн"
+
+print(task_8_description)
 
 # task 09
 """
@@ -96,10 +107,12 @@ print(total_sum)
 розміщено щонайбільше 8 фото. Скільки сторінок знадобиться
 Ігорю, щоб вклеїти всі фото?
 """
-photo_number = 232
-photo_per_page = 8
-all_pages = 232//8
-print(all_pages)
+task_9_description = "Ігор займається фотографією. Він вирішив зібрати всі свої 232\n"\
+"фотографії та вклеїти в альбом. На одній сторінці може бути\n"\
+"розміщено щонайбільше 8 фото. Скільки сторінок знадобиться\n"\
+"Ігорю, щоб вклеїти всі фото?"
+
+print(task_9_description)
 
 # task 10
 """
@@ -112,11 +125,14 @@ print(all_pages)
 равку під час цієї подорожі, кожного разу заправляючи пов-
 ний бак?
 """
-distance = 1600
-gass_1km = 9/100
-capacity = 48
+task_10_description = "Родина зібралася в автомобільну подорож із Харкова в Буда-\n"\
+"пешт. Відстань між цими містами становить 1600 км. Відомо,\n"\
+"що на кожні 100 км необхідно 9 літрів бензину. Місткість баку\n"\
+"становить 48 літрів.\n"\
+"1) Скільки літрів бензину знадобиться для такої подорожі?\n"\
+"2) Скільки щонайменше разів родині необхідно заїхати на зап-\n"\
+"равку під час цієї подорожі, кожного разу заправляючи пов-\n"\
+"ний бак?"
 
-gass_trip = distance * gass_1km
-bak_1 = capacity/gass_1km
-stops = distance/bak_1
-print("Для всієї подорожі знадобиться:", gass_trip, "л.","На заправку потрібно заїхати:", stops, "рази")
+print(task_10_description)
+
