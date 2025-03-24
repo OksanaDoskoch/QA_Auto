@@ -53,7 +53,7 @@ print(number_of_letters)
 capitalized_words_count = adwentures_of_tom_sawer.split()
 count_words = 0
 for word in adwentures_of_tom_sawer.split():
-    if word[0].isupper():
+    if word[0].istitle():
          count_words += 1
 print(count_words)
 
@@ -63,7 +63,7 @@ print(count_words)
 
 search_word = "Tom"
 search_index_1 = adwentures_of_tom_sawer.find(search_word)
-search_index_2 = adwentures_of_tom_sawer.find(search_word, search_index_1 + len(search_word))
+search_index_2 = adwentures_of_tom_sawer.find(search_word, search_index_1 + 1)
 print(search_index_2)
 
 # task 07
@@ -71,7 +71,7 @@ print(search_index_2)
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
 
-adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.rstrip('.').split('.')
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
 print(adwentures_of_tom_sawer_sentences)
 
 # task 08
