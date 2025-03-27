@@ -28,8 +28,5 @@ people_records[1], people_records[5] = people_records[5], people_records[1]
 
 selected_indexes = [6, 10, 13]
 
-age_check_6 = people_records[6][2] >= 30
-age_check_10 = people_records[10][2] >= 30
-age_check_13 = people_records[13][2] >= 30
-
-print(f"person with index 6: {age_check_6}, person with index 10: {age_check_10}, person with index 13: {age_check_13}")
+is_over_30: bool = all([people_records[i][2] >= 30 for i in selected_indexes])
+print(is_over_30)
