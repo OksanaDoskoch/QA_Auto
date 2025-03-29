@@ -1,7 +1,7 @@
 user_input = input("Custom string: ")
 
-char_count = {}
-for char in list(user_input):
-    char_count[char] = char_count.get(char, 0) + 1
+unique_chars = set(user_input)
 
-print(len(char_count) > 10)
+print(len(unique_chars) > 10)
+
+
