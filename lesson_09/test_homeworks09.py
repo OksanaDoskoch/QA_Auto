@@ -10,7 +10,7 @@ class MyTest(unittest.TestCase):
 
     def test_average_negative(self):
         result = calculate_average([4, 6, 8])
-        self.assertEqual(result, 2)
+        self.assertNotEqual(result, 2)
 
     #рядок в зворотньому порядку
     def test_reverse(self):
@@ -21,7 +21,7 @@ class MyTest(unittest.TestCase):
     def test_reverse_negative(self):
         my_string = "Some interesting text "
         result = reverse_string(my_string)
-        self.assertEqual(result, "txet gnitseretni emoS") #пропущено пробіл
+        self.assertNotEqual(result, "txet gnitseretni emoS") #пропущено пробіл
 
     #найдовше слово у списку
     def test_find_longest_word(self):
@@ -43,7 +43,7 @@ class MyTest(unittest.TestCase):
     def test_sum_negative(self):
         numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]
         result = sum_of_even_numbers(numbers)
-        self.assertEqual(result, 30)
+        self.assertNotEqual(result, 30)
 
     #список лише з рядковими (str) елементами з вхідного списку
     def test_extract_string(self):
@@ -54,7 +54,7 @@ class MyTest(unittest.TestCase):
     def test_extract_string_negative(self):
         lst1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8,]
         result = extract_string(lst1)
-        self.assertEqual(result, ['1', '2', True, 'False', '6'])
+        self.assertNotEqual(result, ['1', '2', True, 'False', '6'])
 
 if __name__ == "__main__":
     unittest.main()
