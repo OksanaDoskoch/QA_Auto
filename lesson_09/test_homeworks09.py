@@ -2,7 +2,7 @@ import unittest
 
 from lesson_09.homeworks import calculate_average, reverse_string, find_longest_word, sum_of_even_numbers, extract_string
 
-class MyTest(unittest.TestCase):
+class TestCalculateAverage(unittest.TestCase):
      #середнє значення чисел
     def test_average_positive(self):
         result = calculate_average([4, 6, 8])
@@ -13,6 +13,7 @@ class MyTest(unittest.TestCase):
         self.assertNotEqual(result, 2)
 
     #рядок в зворотньому порядку
+class TestReverseString(unittest.TestCase):
     def test_reverse(self):
         my_string = "Some interesting text "
         result = reverse_string(my_string)
@@ -24,6 +25,7 @@ class MyTest(unittest.TestCase):
         self.assertNotEqual(result, "txet gnitseretni emoS") #пропущено пробіл
 
     #найдовше слово у списку
+class TestFindLongestWord(unittest.TestCase):
     def test_find_longest_word(self):
         words = ["yellow", "green", "cherry", "white-white", "light-brown"]
         result = find_longest_word(words)
@@ -35,6 +37,7 @@ class MyTest(unittest.TestCase):
             find_longest_word([])
 
     # сума парних чисел у списку
+class TestSumOfEvenNumbers(unittest.TestCase):
     def test_sum(self):
         numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]
         result = sum_of_even_numbers(numbers)
@@ -46,6 +49,7 @@ class MyTest(unittest.TestCase):
         self.assertNotEqual(result, 30)
 
     #список лише з рядковими (str) елементами з вхідного списку
+class TestExtractString(unittest.TestCase):
     def test_extract_string(self):
         lst1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8]
         result = extract_string(lst1)
